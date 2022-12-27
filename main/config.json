@@ -1,0 +1,26 @@
+{
+    "main": {
+        "write_speed": 1,
+        "by_word": {
+            "is": false,
+            "long": 1
+        },
+        "by_line": {
+            "is": false,
+            "long": 1
+        },
+        "by_whole_text": {
+            "is": true
+        }
+    },
+    "#":
+    {
+        "说明": "这一板块是注释",
+        "write_speed": "表示每次复制粘贴操作所间隔时间，单位是ms",
+        "by_word": "其中的is若为true则使用以字复制方式，long表示每次复制的长度",
+        "by_line": "其中的is若为true则使用以行复制方式，long表示每次复制的长度",
+        "by_whole_text": "其中的is若为true则使用整篇文章复制方式",
+        "ps1": "by_word,by_line,by_whole_text中的is只能存在一个true，否则重置",
+        "ps2": "若更改数据导致无法恢复，不必担心，重新启动程序即可重置"
+    }
+}
