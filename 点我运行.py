@@ -12,6 +12,7 @@ def auto_write():
     pg.typewrite('*')
     pg.press('backspace')
 
+    print('正在写入...')
     if by == 0:
         for line in lines:
             for index in range(0, len(line), long):
@@ -41,8 +42,14 @@ def auto_write():
 
     pg.typewrite('*')
     pg.press('backspace')
+    pc.copy('')
+    print('\n复制已结束，请自行关闭exe程序或者按下右Ctrl键以结束')
 
 
+print('复制即将开始')
+print('请检查内容是否已经复制在 将想要复制的内容写在我这儿.txt 文件中')
+print('请检查 main/config.txt 文件中是否配置完毕')
+print('若准备就绪，请将光标移至想要复制的位置后按下左Ctrl键示意程序开始')
 keyboard_press.press_start()
 t1 = threading.Thread(target=auto_write, daemon=True)
 t1.start()

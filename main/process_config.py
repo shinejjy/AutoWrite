@@ -3,17 +3,21 @@ import json
 
 def rewrite_json():
     dct = '''{
-    "main": {
+    "main": 
+    {
         "write_speed": 1,
-        "by_word": {
+        "by_word": 
+        {
             "is": true,
             "long": 1
         },
-        "by_line": {
+        "by_line": 
+        {
             "is": false,
             "long": 1
         },
-        "by_whole_text": {
+        "by_whole_text": 
+        {
             "is": false
         }
     },
@@ -28,17 +32,17 @@ def rewrite_json():
         "ps2": "若更改数据导致无法恢复，不必担心，重新启动程序即可重置"
     }
 }'''
-    with open('main/config.json', 'w+') as f:
+    with open('main/config.txt', 'w+') as f:
         f.write(dct)
 
 
 def load_json():
     try:
-        with open('main/config.json', 'r') as f:
+        with open('main/config.txt', 'r') as f:
             cfg = json.load(f)['main']
     except:
         rewrite_json()
-        with open('main/config.json', 'r') as f:
+        with open('main/config.txt', 'r') as f:
             cfg = json.load(f)['main']
     return cfg
 
